@@ -1,22 +1,52 @@
 
 
 $(document).ready(function(){
+	
 	$('.carousel').carousel({
 		interval: 3000
 	});
 
 	loadPage();
 
-	//$("#add-post-btn").click(addPost);
 	$('#form-post').submit(addButtonHandler);
 
 	$('#btn-delete-all').click(clearAll);
 	
 	
-	$('#square1').click(function(){
-		$('#square2').show(500);
+
+	/* валидация */
+	var allInputs = $('form input[type="text"], input[type="password"], input[type="email"], textarea');
+
+	allInputs.focusout(function(e){
+		var validDiv = $('<div />', {
+							class: 'valid-feedback',
+							text: 'Looks good!'
+							});
+		var invalidDiv = $('<div />', {
+							class: 'invalid-feedback',
+							text: "That's not what i want"
+							});
+
+		if(!$(this).val()){
+			$(this).toggleClass('is-valid', false);
+			$(this).toggleClass('is-invalid', true);
+			$(this).parent().append(invalidDiv);
+			$(this).parent().children().remove(validDiv);
+		}else{
+			$(this).toggleClass('is-valid', true);
+			$(this).toggleClass('is-invalid', false);
+			$(this).parent().append(validDiv);
+			$(this).parent().children().remove(invalidDiv);
+		}
+
 	});
 
+	allInputs.focusin(function(e){
+		$(this).toggleClass('is-valid', false);
+		$(this).toggleClass('is-invalid', false);
+		$(this).parent().children('.valid-feedback').remove();
+		$(this).parent().children('.invalid-feedback').remove();
+	})
 });
 
 function loadPage(){

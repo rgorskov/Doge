@@ -8,6 +8,8 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="css/style.css">
 	<title>Hello, world!</title>
@@ -38,41 +40,49 @@
 						<a class="nav-link" href="#"  data-toggle="modal" data-target="#exampleModel">Log in</a>
 					</li>
 				</ul>
+				<div class="social-list my-md-0 my-2">
+					<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+					<a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+					<a href="https://vk.com/"><i class="fab fa-vk"></i></a>
+				</div>
+				<!--
 				<form class="form-inline my-2 my-md-0">
 					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
 				</form>
-			</div>
+			-->
 		</div>
-	</nav>
+	</div>
+</nav>
 
-	<div class="modal fade" id="exampleModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
-		<div class="modal-dialog  modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalTitle">Autorisation</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-						</div>
-						<div class="form-group">
-							<label for="exampleInputPassword1">Password</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-						</div>
-						<div class="form-check">
-							<input type="checkbox" class="form-check-input" id="exampleCheck1">
-							<label class="form-check-label" for="exampleCheck1">Check me out</label>
-						</div>
-						<button type="submit" class="btn btn-primary mt-4" data-dismiss="modal">Submit</button>
-					</form>
-				</div>
+<div class="modal fade" id="exampleModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+	<div class="modal-dialog  modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalTitle">Autorisation</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form  class="needs-validation" novalidate>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">Check me out</label>
+					</div>
+					<button type="submit" class="btn btn-primary mt-4" >Submit</button>
+				</form>
+			</div>
 			<!--
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -158,7 +168,7 @@
 				<div class="sub-block rounded shadow p-3 mb-4">
 					<form method="post" action="#">
 						<div class="form-group">
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							<input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
 							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 						</div>
 						<button type="submit" class="btn btn-success btn-block">Subscribe</button>
@@ -350,7 +360,7 @@
 						<textarea class="form-control" name="post-text" rows="5" required>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis labore enim itaque illum. Ut ipsa recusandae animi sit esse itaque maiores beatae consequuntur repellendus repudiandae accusantium atque et quas numquam, possimus eligendi, voluptates quae ipsum minima. Veniam aperiam inventore sed expedita impedit nobis dolor velit nostrum neque possimus, dicta porro!</textarea>
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-primary w-100" value="Add">
+						<button type="submit" class="btn btn-primary w-100">Add</button>
 					</div>
 					<!--<button type="submit" class="btn btn-primary mt-4" id='add-post-btn'>Add</button>-->
 				</form>
